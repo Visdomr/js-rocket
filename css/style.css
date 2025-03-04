@@ -4,3 +4,16 @@ body{
         font-size: 20px;
         font-family: Arial;
 }
+
+.cool {
+	visibility: hidden;
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	tansition: background-color 2s;
+}
+
+.cool.red{
+	visibility: visible;
+	background-color: red;
+}

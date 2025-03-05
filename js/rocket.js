@@ -12,8 +12,18 @@ var changeState = function(state) {
 			if (countdownNumber <= 0) {
 				changeState(3);
 			};
-		}, 1000);
+		}, 500);
 
 	} else if (state == 3) {
-	}
+		var success = setTimeout(function() {
+			var randomNumber = Math.round(Math.random() * 10);
+                        console.log('randomNumber:', randomNumber)
+
+			if (randomNumber > 5) {
+				changeState(4);
+			} else {
+				changeState(5);
+			}
+		}, 2000);
+	};
 }

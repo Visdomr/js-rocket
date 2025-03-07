@@ -12,30 +12,30 @@ var changeState = function(state) {
 			countdownNumber = countdownNumber - 1;
 			document.getElementById('countdown').innerHTML = countdownNumber;
 			if (countdownNumber > 4 && countdownNumber <= 7) {
-			document.getElementById('nervous').className = 'nervous show';
-		} else {
-			document.getElementById('nervous').className = 'nervous';
-		}
-		if (countdownNumber > 1 && countdownNumber <= 4) {
-			document.getElementById('cant-wait').className = 'cant-wait show';
-		} else {
-			document.getElementById('cant-wait').className = 'cant-wait';
-		}
-		if (countdownNumber <= 0) {
-			changeState(3);
-		};
-	}, 500);
+				document.getElementById('nervous').className = 'nervous show';
+			} else {
+				document.getElementById('nervous').className = 'nervous';
+			}
+			if (countdownNumber > 1 && countdownNumber <= 4) {
+				document.getElementById('cant-wait').className = 'cant-wait show';
+			} else {
+				document.getElementById('cant-wait').className = 'cant-wait';
+			}
+			if (countdownNumber <= 0) {
+				changeState(3);
+			};
+		}, 500);
 
-} else if (state == 3) {
-	var success = setTimeout(function() {
-		var randomNumber = Math.round(Math.random() * 10);
-		console.log('randomNumber:', randomNumber)
+	} else if (state == 3) {
+		var success = setTimeout(function() {
+			var randomNumber = Math.round(Math.random() * 10);
+			console.log('randomNumber:', randomNumber)
 
-		if (randomNumber > 4) {
-			changeState(4);
-		} else {
-			changeState(5);
-		}
-	}, 2000);
-};
+			if (randomNumber > 3) {
+				changeState(4);
+			} else {
+				changeState(5);
+			}
+		}, 2000);
+	};
 }
